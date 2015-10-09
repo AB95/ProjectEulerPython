@@ -1,21 +1,7 @@
-import time
-
-
-#@profile
-# def func():
-#     return sum(n for n in xrange(1000) if n%3 == 0 or n%5 == 0)
-#
-# start = time.time()
-# print func()
-# end = time.time()
-# print end-start
-
-def func():
-    start = time.time()
+def euler001(n):
     sum = 0
-    for i in xrange(100000000):
+    for i in xrange(n):
         if i % 3 == 0 or i % 5 == 0:
             sum += i
-    return time.time() - start
+    return sum
 
-print func()
