@@ -1,23 +1,9 @@
-#@profile
-
-import time
-def func():
-    
-    start = time.time()
-    x = 1
-    y = 1
+def euler2(n):
+    a = 0
+    b = 1
     total = 0
-    k = 4000000
-    while x<=k or y<=k:
-        if x%2 and x<=k:
-            total += x
-        if y%2 and y<=k:
-            total += y
-        x += y
-        y += x
-    print total
-    end = time.time()
-    timet = end - start
-    print timet
-    
-func()
+    while b < n:
+        a, b = b, a+b
+        if b%2 == 0:
+            total += b
+    return total

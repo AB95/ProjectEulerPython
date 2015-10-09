@@ -1,7 +1,6 @@
-def euler001(n):
-    sum = 0
+def euler1(n):
+    total = 0
     for i in xrange(n):
         if i % 3 == 0 or i % 5 == 0:
-            sum += i
-    return sum
-
+            total += i
+    return total
