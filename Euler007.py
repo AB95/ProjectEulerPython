@@ -6,7 +6,7 @@ def euler7(n):
         return 2
 
     num = 1
-    i = 2
+    i = 1
 
     while i < n:
         num += 2
