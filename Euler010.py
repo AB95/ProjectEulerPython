@@ -1,27 +1,17 @@
-from math import sqrt
-import time
-
-
-def func(top):
-    start = time.time()
-    squrt = int(sqrt(top))
+def euler010(n):
+    squrt = int(n**0.5)
     
-    array = [True] * top
-    def mark(array, x):
-        for i in xrange(x*x, len(array), x):
-            array[i] = False
+    bool_list = [True] * n
+
+    def mark(function_list, x):
+        for i in xrange(x*x, len(function_list), x):
+            function_list[i] = False
     
-    array[0] = False
-    array[1] = False
+    bool_list[0] = False
+    bool_list[1] = False
     
     for j in xrange(2, squrt+1):
-        mark(array, j)
-    #        print j
+        mark(bool_list, j)
     
-    print sum(s for s in xrange(0, len(array)) if array[s])
-    # return [s for s in xrange(0, len(array)) if array[s]]
-    end = time.time()
-    timet = end - start
-    print timet
+    return sum(s for s in xrange(0, len(bool_list)) if bool_list[s])
 
-func(2000000)
